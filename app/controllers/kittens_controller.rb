@@ -12,6 +12,7 @@ class KittensController < ApplicationController
 
   # GET /kittens/new
   def new
+    @kitten = Kitten.new
   end
 
   # GET /kittens/:id/edit

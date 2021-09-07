@@ -1,0 +1,17 @@
+<h4 class="title is-4">Information for <em><%= kitten.name %></em></h4>
+
+<%= form_with model: kitten do |form| %>
+  <div class="field">
+    <%= form.label :name, 'Name' %>
+    <%= form.text_field :name, autofocus: true, class: 'input' %>
+  </div>
+  <div class="field">
+    <%= form.label :age, 'Age' %>
+    <%= form.text_field :age, placeholder: 'Enter a number', class: 'input' %>
+  </div>
+  <div class="field">
+    <%= form.label :cuteness, 'How cute are they? (1-100)'%>
+    <%= form.text_field :cuteness, placeholder: 'Don\'t be humble!', class: 'input' %>
+  </div>
+  <%= form.submit class: 'button'%>
+<% end %>

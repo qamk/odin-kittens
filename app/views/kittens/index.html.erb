@@ -1,2 +1,9 @@
 <h1>Kittens#index</h1>
+  <div class="block">
+    <% @kittens.each do |kitten|  %>
+      <p>I am called <%= kitten.name %></p>
+      <p>My age is <%= kitten.age %></p>
+      <p>My cuteness rating is <strong><%= kitten.cuteness %></strong></p>
+    <% end %>
+  </div>
 <p>Find me in app/views/kittens/index.html.erb</p>
