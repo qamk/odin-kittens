@@ -4,4 +4,6 @@
   <li>I am <%= @kitten.age %> years old</li>
   <li>My cuteness rating is <%= @kitten.cuteness %></li>
 </ul>
+<%= link_to 'Edit kitten', edit_kitten_path(@kitten), class: 'button' %>
+<%= link_to 'Delete kitten', kitten_path(@kitten), method: :delete, class: 'button' %>
 <p>Find me in app/views/kittens/show.html.erb</p>

@@ -4,6 +4,8 @@
       <p>I am called <%= kitten.name %></p>
       <p>My age is <%= kitten.age %></p>
       <p>My cuteness rating is <strong><%= kitten.cuteness %></strong></p>
+      <%= link_to 'Edit kitten', edit_kitten_path(kitten), class: 'button' %>
+      <%= link_to 'Delete kitten', kitten_path(kitten), method: :delete, class: 'button' %>
     <% end %>
   </div>
 <p>Find me in app/views/kittens/index.html.erb</p>
