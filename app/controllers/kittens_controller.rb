@@ -4,10 +4,16 @@ class KittensController < ApplicationController
   # GET /kittens
   def index
     @kittens = Kitten.all
+    respond_to do |format|
+      format.json { render json: @kittens }
+    end
   end
 
   # GET /kittens/:id
   def show
+    respond_to do |format|
+      format.json { render json: @kitten }
+    end
   end
 
   # GET /kittens/new
